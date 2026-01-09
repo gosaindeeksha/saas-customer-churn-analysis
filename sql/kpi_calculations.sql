@@ -36,8 +36,8 @@ SELECT * FROM active_acc_start_of_month ;
 CREATE VIEW monthly_churn_rate AS
 SELECT a.month,COALESCE(m.churned_accounts,0) AS churned_accounts,a.active_accounts, 
 ROUND(CAST(COALESCE(m.churned_accounts,0) AS REAL) / a.active_accounts,4) AS monthly_churn_rate
-FROM monthly_churned_accs m
-RIGHT JOIN active_acc_start_of_month a  
+FROM active_acc_start_of_month a 
+LEFT JOIN  monthly_churned_accs m
 ON a.month = m.month
 ORDER BY m.month;
 
