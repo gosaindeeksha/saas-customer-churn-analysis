@@ -1,4 +1,4 @@
 .vscode/
-
+data/raw/changes.ipynb
 # SQLite database
 *.db
