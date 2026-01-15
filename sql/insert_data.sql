@@ -98,36 +98,7 @@ WHERE usage_id != 'usage_id' AND  rowid IN (SELECT MIN(rowid) FROM feature_usage
 SELECT COUNT(*) FROM feature_usage;
 SELECT * FROM feature_usage LIMIT 5;
 
---4.Query to insert data into the support ticket table
-INSERT INTO support_ticket (
-    ticket_id,
-    account_id,
-    submitted_at,
-    closed_at,
-    resolution_time_hours,
-    priority,
-    first_response_time_minutes,
-    satisfaction_score,
-    escalation_flag
-)
-SELECT
-    ticket_id,
-    account_id,
-    submitted_at,
-    closed_at,
-    resolution_time_hours,
-    priority,
-    first_response_time_minutes,
-    satisfaction_score,
-    escalation_flag
-FROM support_tickets_staging
-WHERE ticket_id != 'ticket_id';
-
--- Some Queries to check if data has been imported properly 
-SELECT COUNT(*) FROM support_ticket;
-SELECT * FROM support_ticket LIMIT 5;
-
---5.Query to insert data into the churn table
+--4.Query to insert data into the churn table
 INSERT INTO churn (
     churn_event_id,
     account_id,

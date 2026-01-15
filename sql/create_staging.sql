@@ -49,28 +49,12 @@ CREATE TABLE IF NOT EXISTS feature_usage_staging(
     error_count INTEGER,
     is_beta_feature BOOLEAN
 );
+
  -- Some Queries to check if data has been imported properly from the CSV file
 SELECT COUNT(*) FROM feature_usage_staging;
 SELECT * FROM feature_usage_staging LIMIT 5;
 
---4.  Query to create staging table for support tickets data
-CREATE TABLE IF NOT EXISTS support_tickets_staging(
-    ticket_id TEXT,
-    account_id TEXT,
-    submitted_at TEXT,
-    closed_at TEXT,
-    resolution_time_hours REAL,
-    priority  TEXT,
-    first_response_time_minutes INTEGER,
-    satisfaction_score INTEGER,
-    escalation_flag BOOLEAN
-
-);
- -- Some Queries to check if data has been imported properly from the CSV file
-SELECT COUNT(*) FROM support_tickets_staging;
-SELECT * FROM support_tickets_staging LIMIT 5;
-
---5.  Query to create staging table for churn events data
+--4.  Query to create staging table for churn events data
 CREATE TABLE IF NOT EXISTS churn_staging(
     churn_event_id TEXT,
     account_id TEXT,

@@ -49,22 +49,7 @@ CREATE TABLE IF NOT EXISTS feature_usage(
     FOREIGN KEY (subscription_id) REFERENCES subscriptions(subscription_id)
 );
 
---4.  Query to create table for support tickets data
-CREATE TABLE IF NOT EXISTS support_ticket(
-    ticket_id TEXT PRIMARY KEY,
-    account_id TEXT,
-    submitted_at TEXT,
-    closed_at TEXT,
-    resolution_time_hours REAL,
-    priority  TEXT,
-    first_response_time_minutes INTEGER,
-    satisfaction_score INTEGER,
-    escalation_flag BOOLEAN,
-
-    FOREIGN KEY (account_id) REFERENCES accounts(account_id)
-);
-
---5.  Query to create table for churn events data
+--4.  Query to create table for churn events data
 CREATE TABLE IF NOT EXISTS churn(
     churn_event_id TEXT PRIMARY KEY,
     account_id TEXT,
