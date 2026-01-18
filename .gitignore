@@ -1,4 +1,5 @@
 .vscode/
 data/raw/changes.ipynb
 # SQLite database
+dashboards/saas_dashboard.pbix
 *.db
