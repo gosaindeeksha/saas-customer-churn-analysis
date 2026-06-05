@@ -109,29 +109,29 @@ The dataset contains information on:
 
 Five interactive dashboards were built in **Power BI**, following a decision-driven analytical flow from churn detection to action planning.
 
-### Dashboard 1 — Churn Trend & Structural Shift
+### Dashboard 1 - Churn Trend & Structural Shift
 - Monthly churn rate trend with annotated inflection point (early 2024)
 - Active accounts at start of month
 - Monthly churned accounts
 - **Identifies whether churn is worsening structurally over time**
 
-### Dashboard 2 — Cohort Retention Breakdown
+### Dashboard 2 - Cohort Retention Breakdown
 - Cohort retention heatmap (signup month × months since signup)
 - Retention curves comparing pre-2024 vs post-2024 cohorts
 - **Evaluates whether rising churn is driven by weaker cohort retention**
 
-### Dashboard 3 — Early-Life Churn Diagnostics
+### Dashboard 3 - Early-Life Churn Diagnostics
 - Early churn rates (90-day)
 - Retention comparison: trial vs non-trial users
 - **Focuses on identifying the population for churn diagnostics**
 
-### Dashboard 4 — Usage Intensity, Errors & Product Friction
+### Dashboard 4 - Usage Intensity, Errors & Product Friction
 - Early churn rate by activation bucket
 - Errors per active day by activation level
 - Feature-level error analysis highlighting product friction
 - Exploratory behavioral analysis on trial users (n = 67)
 
-### Dashboard 5 — Risk Focus & Action Planning
+### Dashboard 5 - Risk Focus & Action Planning
 - Comparison of high-risk vs low-risk account behavior
 - Dominant error-driving features for high risk accounts
 - Action-ready insights to prioritize users and product fixes for retention improvement
